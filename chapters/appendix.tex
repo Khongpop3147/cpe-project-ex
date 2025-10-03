@@ -1,27 +1,46 @@
-\chapter{The first appendix}
+\chapter{ภาคผนวกแรก (The first appendix)}
 
-Text for the first appendix goes here.
+ภาคผนวกนี้รวบรวมเอกสารเสริมและรายละเอียดเพิ่มเติมที่เกี่ยวข้องกับการพัฒนาระบบ
+เว็บไซต์และแดชบอร์ดสำหรับผู้ขาย OTOP เช่น แบบสอบถามที่ใช้เก็บข้อมูลจากผู้ใช้,
+โค้ดสำคัญที่เกี่ยวข้องกับการทำงานของระบบแนะนำสินค้า, และรายละเอียดโครงสร้างฐานข้อมูล
 
-\section{Appendix section}
+\section{แบบสอบถามสำหรับผู้ใช้ (User Survey Form)}
+แบบสอบถามนี้ถูกใช้เพื่อเก็บข้อมูลจากผู้ใช้งาน โดยเฉพาะกลุ่มผู้สูงอายุ 
+เพื่อทำความเข้าใจพฤติกรรมการซื้อสินค้าออนไลน์และปัญหาที่พบ
 
-Text for a section in the first appendix goes here.
+\begin{enumerate}
+  \item ท่านเคยซื้อสินค้า OTOP ผ่านช่องทางออนไลน์หรือไม่?
+  \item อุปกรณ์ที่ใช้บ่อยที่สุดในการซื้อสินค้าออนไลน์คืออะไร? 
+        (โทรศัพท์มือถือ / คอมพิวเตอร์ / แท็บเล็ต)
+  \item ปัญหาที่พบในการใช้งานเว็บไซต์หรือแอปพลิเคชันทั่วไปคืออะไร?
+  \item ท่านให้ความสำคัญกับการชำระเงินผ่าน PromptPay หรือไม่?
+  \item ระบบที่ท่านอยากให้มีเพิ่มเติม (เลือกได้มากกว่า 1 ข้อ): 
+        \begin{itemize}
+            \item การแจ้งเตือนสินค้าคงเหลือ
+            \item ระบบรีวิวและคะแนนสินค้า
+            \item ระบบแนะนำสินค้าตามความสนใจ
+        \end{itemize}
+\end{enumerate}
 
-test ทดสอบฟอนต์ serif ภาษาไทย
+\section{ตัวอย่างโค้ดระบบแนะนำสินค้าเชิงพฤติกรรม}
+โค้ดตัวอย่างนี้แสดงวิธีการตรวจสอบคำตอบจากแบบสอบถามสั้น ๆ 
+เพื่อเลือกสินค้าที่เหมาะสมกับผู้ใช้งาน
 
-\textsf{test ทดสอบฟอนต์ sans serif ภาษาไทย}
+\begin{verbatim}
+if (mood == "unhappy") {
+    recommendedProduct = "เครื่องประดับสีแดง";
+} else if (mood == "relaxed") {
+    recommendedProduct = "ชา OTOP สมุนไพร";
+} else {
+    recommendedProduct = "สินค้าแนะนำประจำสัปดาห์";
+}
+\end{verbatim}
 
-\verb+test ทดสอบฟอนต์ teletype ภาษาไทย+
-
-\texttt{test ทดสอบฟอนต์ teletype ภาษาไทย}
-
-\textbf{ตัวหนา serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}
-
-\textit{ตัวเอียง serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}
-
-\textbf{\textit{ตัวหนาเอียง serif ภาษาไทย \textsf{sans serif ภาษาไทย} \texttt{teletype ภาษาไทย}}}
-
-\url{https://www.example.com/test_ทดสอบ_url}
-
-\chapter{\ifenglish Manual\else คู่มือการใช้งานระบบ\fi}
-
-Manual goes here.
+\section{รายละเอียดโครงสร้างฐานข้อมูลเพิ่มเติม}
+\begin{itemize}
+  \item ตาราง \textbf{Users} : เก็บข้อมูลผู้ซื้อและผู้ขาย
+  \item ตาราง \textbf{Products} : เก็บรายละเอียดสินค้า OTOP
+  \item ตาราง \textbf{Orders} : เก็บคำสั่งซื้อและสถานะ
+  \item ตาราง \textbf{Payments} : เก็บข้อมูลการชำระเงินผ่าน PromptPay
+  \item ตาราง \textbf{Analytics} : เก็บข้อมูลการเข้าชมและพฤติกรรมการใช้งาน
+\end{itemize}

@@ -85,3 +85,8 @@ copy of sampleReport.tex and keep sampleReport.tex unchanged.
   cp sampleReport.tex <your-file-name.tex>
 Then, add the following entry into "settings.json", under "settings" key:
     "latex-workshop.latex.search.rootFiles.exclude": ["**/sampleReport.tex"]
+
+ถ้าจะ run = latexmk -xelatex sampleReport.tex
+run = ./build.sh
+# หรือโหมดเฝ้าไฟล์
+run = ./build.sh watch
