@@ -38,11 +38,29 @@
 \section{\ifenglish Technology and tools\else เทคโนโลยีและเครื่องมือที่ใช้\fi}
 
 \subsection{\ifenglish Hardware technology\else เทคโนโลยีด้านฮาร์ดแวร์\fi}
-เซิร์ฟเวอร์สำหรับให้บริการเว็บไซต์ และอุปกรณ์ของผู้ใช้ เช่น คอมพิวเตอร์และสมาร์ตโฟน
+เซิร์ฟเวอร์สำหรับให้บริการเว็บไซต์ และอุปกรณ์ของผู้ใช้ เช่น คอมพิวเตอร์และสมาร์ตโฟน \cite{latexcompanion}
 
 \subsection{\ifenglish Software technology\else เทคโนโลยีด้านซอฟต์แวร์\fi}
-เครื่องมือที่ใช้พัฒนาเว็บไซต์ ได้แก่ เทคโนโลยีด้าน Frontend, Backend, ระบบฐานข้อมูล 
-รวมถึงเครื่องมือช่วยจัดการโค้ดและการพัฒนา (เช่น GitHub, Docker)
+ซอฟต์แวร์และเครื่องมือที่ใช้ในการพัฒนาโครงการนี้ประกอบด้วย \cite{responsiveweb}
+
+\begin{itemize}
+    \item \textbf{Frontend:} React.js ร่วมกับ Tailwind CSS 
+    เพื่อสร้างส่วนติดต่อผู้ใช้ที่เรียบง่าย ใช้งานสะดวก และเป็นมิตรกับผู้สูงอายุ \cite{responsiveweb}
+    \item \textbf{Backend:} Next.js (Node.js + TypeScript) 
+    รองรับทั้ง Server-side Rendering (SSR) และ API สำหรับการติดต่อกับฐานข้อมูล
+    \item \textbf{Database:} PostgreSQL 
+    ใช้จัดเก็บข้อมูลผู้ใช้ สินค้า คำสั่งซื้อ และข้อมูลเชิงวิเคราะห์
+    \item \textbf{Authentication:} OAuth 2.0 และ JWT 
+    เพื่อจัดการสิทธิ์การเข้าถึงและความปลอดภัยของผู้ใช้งาน
+    \item \textbf{Payment:} ระบบการชำระเงินผ่าน PromptPay 
+    สะดวกและเหมาะสมกับผู้ใช้ในประเทศไทย
+    \item \textbf{Development Tools:} 
+    GitHub สำหรับจัดการซอร์สโค้ดและการทำงานร่วมกัน, 
+    Docker สำหรับการจัดการสภาพแวดล้อมการพัฒนา \cite{docker2023}, 
+    และ Visual Studio Code สำหรับการพัฒนาโปรแกรม
+    \item \textbf{Accessibility:} การออกแบบตามมาตรฐาน WCAG 2.1 
+    เพื่อรองรับผู้ใช้งานทุกกลุ่ม รวมถึงผู้สูงอายุและผู้พิการทางสายตา
+\end{itemize}
 
 \section{\ifenglish Project plan\else แผนการดำเนินงาน\fi}
 \begin{plan}{6}{2025}{2}{2026}
