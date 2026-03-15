@@ -1,73 +1,52 @@
 \chapter{\ifproject%
 \ifenglish Project Structure and Methodology\else โครงสร้างและขั้นตอนการทำงาน\fi
 \else%
-\ifenglish Project Structure\else โครงสร้างของโครงงาน\fi
-\fi
-}
+\ifenglish Project Structure\else โครงสร้างของโครงการ\fi
+\fi}
 
-ในบทนี้จะกล่าวถึงหลักการ ขั้นตอนการทำงาน และโครงสร้างของระบบ
-ซึ่งครอบคลุมทั้งการออกแบบ การพัฒนา และการทดสอบระบบ \cite{pressman2014}
-เพื่อให้ผู้อ่านเข้าใจวิธีการทำงานของโครงการอย่างเป็นระบบ
+ในบทนี้จะกล่าวถึงโครงสร้างและขั้นตอนการพัฒนาโครงการ Elder Store ซึ่งเน้นการออกแบบและพัฒนาระบบที่เหมาะสมกับผู้สูงอายุ
 
 \section{ภาพรวมของระบบ (System Overview)}
-ระบบเว็บไซต์และแดชบอร์ดผู้ขาย OTOP ประกอบด้วยสองส่วนหลัก ได้แก่ \cite{ecommerce2019}
+ระบบ Elder Store ประกอบด้วยส่วนติดต่อผู้ใช้ (Frontend) และส่วนประมวลผล (Backend) ที่ออกแบบมาเพื่อรองรับการใช้งานของผู้สูงอายุโดยเฉพาะ
 \begin{itemize}
-  \item \textbf{Frontend} ส่วนติดต่อผู้ใช้ที่ออกแบบให้เรียบง่าย 
-  รองรับหลักการ WCAG 2.1 เช่น การเลือกสีที่มีคอนทราสต์สูง 
-  การปรับขนาดตัวอักษรได้ และการนำทางด้วยคีย์บอร์ด 
-  เหมาะสมกับผู้สูงอายุและผู้ใช้ทุกกลุ่ม
-  \item \textbf{Backend และแดชบอร์ด} สำหรับผู้ขาย ใช้จัดการสินค้า วิเคราะห์ข้อมูลยอดขาย 
-  และแจ้งเตือนสินค้าคงเหลือ
+  \item \textbf{Frontend:} ใช้ React.js และ Tailwind CSS เพื่อสร้างส่วนติดต่อผู้ใช้ที่เรียบง่ายและเหมาะสมกับผู้สูงอายุ
+  \item \textbf{Backend:} ใช้ Next.js และ PostgreSQL เพื่อจัดการข้อมูลและรองรับการทำงานของระบบ
 \end{itemize}
 
 \section{กระบวนการพัฒนาโครงการ (Project Development Process)}
-โครงการนี้ใช้หลักการของ \textit{Software Development Life Cycle (SDLC)} \cite{pressman2014}
-โดยเลือกใช้รูปแบบการพัฒนาแบบ \textit{Agile} เพื่อความยืดหยุ่น \cite{pressman2014}
-และสามารถปรับปรุงแก้ไขตามความต้องการของผู้ใช้ได้อย่างต่อเนื่อง
+โครงการนี้ใช้กระบวนการพัฒนาแบบ Agile เพื่อให้สามารถปรับปรุงและพัฒนาระบบได้อย่างต่อเนื่อง
 
 \subsection{ขั้นตอนการดำเนินงาน}
 \begin{enumerate}
-  \item \textbf{การวิเคราะห์ความต้องการ (Requirement Analysis)} 
-  เก็บข้อมูลจากผู้ประกอบการ OTOP และผู้บริโภค \cite{otop2020}
-  โดยคำนึงถึงข้อจำกัดของผู้สูงอายุและผู้พิการทางสายตา
-  \item \textbf{การออกแบบระบบ (System Design)} 
-  แยกโครงสร้าง Frontend/Backend/ฐานข้อมูล พร้อมกำหนดอินเตอร์เฟซ 
-  โดยยึดหลัก WCAG 2.1 เช่น การใช้สีที่อ่านง่าย ข้อความมีคำอธิบายชัดเจน 
-  และใส่คำอธิบายรูปภาพ (alt text) \cite{pressman2014}
-  \item \textbf{การพัฒนาและทดสอบ (Implementation and Testing)} 
-  พัฒนาโมดูลและทดสอบเชิงหน่วย/เชิงรวม \cite{pressman2014}
-  โดยเสริมการทดสอบ Accessibility
-  \item \textbf{การปรับปรุงและส่งมอบ (Deployment)} 
-  นำระบบใช้งานจริงและปรับตามข้อเสนอแนะ \cite{ecommerce2019}
+  \item \textbf{การวิเคราะห์ความต้องการ (Requirement Analysis):} ศึกษาความต้องการของผู้สูงอายุและออกแบบระบบที่ตอบโจทย์
+  \item \textbf{การออกแบบระบบ (System Design):} ออกแบบโครงสร้างระบบและส่วนติดต่อผู้ใช้ที่เหมาะสม
+  \item \textbf{การพัฒนาและทดสอบ (Implementation and Testing):} พัฒนาระบบและทดสอบการใช้งานเพื่อให้มั่นใจว่าระบบทำงานได้ตามที่กำหนด
 \end{enumerate}
 
 \subsection{แผนภาพโครงสร้างระบบ (System Architecture Diagram)}
+\includegraphics[width=0.8\textwidth]{Final.drawio.png}
 \begin{figure}[h]
   \centering
-  % ----- Placeholder box แทนรูป เพื่อไม่ให้ error ถ้าไม่มีไฟล์รูป -----
-  \fbox{\parbox{0.8\textwidth}{\centering
-  \vspace{18mm} \textit{System Architecture Diagram Placeholder} \vspace{18mm}}}
-  \caption[System architecture]{ภาพรวมโครงสร้างระบบเว็บไซต์และแดชบอร์ดผู้ขาย OTOP}
+  % Insert actual system architecture image
+  \caption[System architecture]{ภาพรวมโครงสร้างระบบเว็บไซต์ Elder Store}
   \label{fig:system-architecture}
 \end{figure}
 
 \section{โครงสร้างฐานข้อมูล (Database Structure)}
-ฐานข้อมูลเก็บข้อมูลผู้ใช้ สินค้า คำสั่งซื้อ การชำระเงิน และบันทึกสถิติการเข้าชม \cite{pressman2014}
-โดยคำนึงถึงการทำ Normalization เพื่อลดความซ้ำซ้อนและเพิ่มประสิทธิภาพการสืบค้น
+\includegraphics[width=0.8\textwidth]{ภาพถ่ายหน้าจอ 2568-11-10 เวลา 07.19.03.png}
 
 \subsection{ความสัมพันธ์ของข้อมูล (Entity Relationship)}
 \begin{itemize}
-  \item \textbf{Users}: บัญชีผู้ซื้อ/ผู้ขาย และสิทธิ์การใช้งาน \cite{pressman2014}
-  \item \textbf{Products}: รายการสินค้า คุณลักษณะ ราคา และสถานะสต็อก 
-  รวมถึงข้อมูลคำอธิบายรูปภาพ (alt text) เพื่อรองรับการเข้าถึงตาม WCAG \cite{ecommerce2019}
-  \item \textbf{Orders}: ใบสั่งซื้อ รายการสินค้าในคำสั่งซื้อ และสถานะการจัดส่ง \cite{ecommerce2019}
-  \item \textbf{Payments}: หลักฐาน/สถานะการชำระเงิน (เช่น PromptPay) \cite{promptpay2021}
-  \item \textbf{Analytics}: บันทึกการเข้าชม การคลิก และสถิติยอดขาย \cite{otop2020}
+  \item \textbf{Users}: บัญชีผู้ซื้อ/ผู้ขาย และสิทธิ์การใช้งาน 
+  \item \textbf{Products}: รายการสินค้า คุณลักษณะ ราคา และสถานะสต็อก รวมถึงข้อมูลคำอธิบายรูปภาพ (alt text) เพื่อรองรับการเข้าถึงตาม WCAG
+  \item \textbf{Orders}: ใบสั่งซื้อ รายการสินค้าในคำสั่งซื้อ และสถานะการจัดส่ง
+  \item \textbf{Payments}: หลักฐาน/สถานะการชำระเงิน (เช่น PromptPay)
+  \item \textbf{Analytics}: บันทึกการเข้าชม การคลิก และสถิติยอดขาย
 \end{itemize}
 
 \section{วิธีการทดสอบระบบ (System Testing Methodology)}
 
-การทดสอบระบบเป็นขั้นตอนสำคัญในการตรวจสอบความถูกต้องและความสมบูรณ์ของระบบ 
+การทดสอบระบบเป็นขั้นตอนสำคัญในการตรวจสอบความถูกต้องและความสมบูรณ์ของระบบ
 เพื่อให้มั่นใจว่าทุกฟังก์ชันทำงานได้ตามที่ออกแบบไว้และเหมาะสมกับกลุ่มผู้ใช้งานเป้าหมาย 
 โดยโครงการนี้ได้ใช้วิธีการทดสอบหลักดังต่อไปนี้
 
