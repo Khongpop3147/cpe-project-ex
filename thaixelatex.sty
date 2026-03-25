@@ -11,8 +11,10 @@
 \defaultfontfeatures{Mapping=tex-text}
 
 %% Thai language setup
-\XeTeXlinebreaklocale 'th_TH'
-\XeTeXlinebreakskip = 0pt plus 0.2pt minus 0.2pt
+\ifdefined\XeTeXlinebreaklocale
+  \XeTeXlinebreaklocale 'th_TH'
+  \XeTeXlinebreakskip = 0pt plus 0.2pt minus 0.2pt
+\fi
 
 % --- Thai fonts (macOS fallback) ---
 \IfFontExistsTF{Thonburi}{
@@ -24,7 +26,7 @@
 \IfFontExistsTF{Sukhumvit Set}{
   \newfontfamily\thaifontsf[Script=Thai,Scale=MatchLowercase]{Sukhumvit Set}
 }{
-  \newfontfamily\thaifontsf[Script=Thai,Scale=MatchLowercase]{Helvetica}
+  \newfontfamily\thaifontsf[Script=Thai,Scale=MatchLowercase]{DejaVu Sans}
 }
 
 \IfFontExistsTF{Courier New}{
@@ -40,10 +42,10 @@
   \setmainfont{Serif}
 }
 
-\IfFontExistsTF{Helvetica}{
-  \setsansfont{Helvetica}
+\IfFontExistsTF{DejaVu Sans}{
+  \setsansfont{DejaVu Sans}
 }{
-  \setsansfont{Arial}
+  \setsansfont{Liberation Sans}
 }
 
 \IfFontExistsTF{Courier New}{
