@@ -28,7 +28,7 @@
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{Final.drawio.png}
+  \includegraphics[width=0.8\textwidth]{Sysem Arch.png}
   \caption[System architecture]{ภาพรวมโครงสร้างระบบสถาปัตยกรรมของแพลตฟอร์ม Elder Store}
   \label{fig:system-architecture}
 \end{figure}
@@ -41,43 +41,44 @@
 
 \subsection{หน้าจอโฮมเพจหลัก (Home Page Design)}
 \textbf{ทฤษฎีแนวคิดการออกแบบ (Design Rationale):} ออกแบบตามหลักสถาปัตยกรรมสารสนเทศ (Information Architecture) โดยเน้นลดทอนปุ่มเมนูที่ซับซ้อนทิ้งไป (Minimalism) และใช้ฟอนต์ขนาดกว้างพิเศษร่วมกับรูปแบนเนอร์โปรโมชันที่ชัดเจน เพื่อทำหน้าที่เป็นป้ายบอกทาง (Signifiers) ต้อนรับผู้สูงอายุเข้าสู่แพลตฟอร์มอย่างเป็นมิตร โดยหลีกเลี่ยงการยัดเยียดเนื้อหาที่แน่นเกินไป
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    % \includegraphics[width=0.9\textwidth]{รูป_figma_home.png}
+    \includegraphics[width=0.9\linewidth, height=0.42\textheight, keepaspectratio]{DemoHomemanage.png}
     \caption{แบบจำลองโครงร่างหน้าจอโฮมเพจหลักจากผู้พัฒนา (Figma)}
 \end{figure}
 
 \subsection{หน้าจอรายการหมวดหมู่และสินค้า (Product Catalog Design)}
 \textbf{ทฤษฎีแนวคิดการออกแบบ (Design Rationale):} ประยุกต์ใช้ทฤษฎีอัตราความเปรียบต่างสีขั้นสูง (High Contrast Ratio) ระหว่างสีพื้นหลังกับตัวอักษร ตัดการใช้คำศัพท์ภาษาอังกฤษที่เข้าใจยากออก และเน้นปุ่ม "ดูรายละเอียด" ให้มีขนาดพื้นที่รับสัมผัส (Touch Target) ขั้นต่ำขนาด 48x48 พิกเซล ป้องกันปัญหานิ้วสั่นหรือการทัชสกรีนพลาดของผู้ใหญ่
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    % \includegraphics[width=0.9\textwidth]{รูป_figma_catalog.png}
+    \includegraphics[width=0.9\linewidth, height=0.42\textheight, keepaspectratio]{DemoAllproduct.png}
     \caption{แบบจำลองโครงร่างหน้าจอรายการสินค้าและคัดกรองหมวดหมู่}
 \end{figure}
 
 \subsection{หน้ารายละเอียดสรรพคุณสินค้า (Product Detail Design)}
 \textbf{ทฤษฎีแนวคิดการออกแบบ (Design Rationale):} เน้นการสร้างหลักฐานทางสังคม (Social Proof) ผ่านการดึงโชว์ข้อมูลรีวิวหรือรูปภาพเพิ่มเติม เพื่อเร่งวิสัยทัศน์ความมั่นใจของผู้สูงอายุ ออกแบบปุ่ม "เพิ่มลงตะกร้า" ด้วยสีโทนสว่างที่โดดเด่น (Call to Action) และวางไว้ในตำแหน่งมุมขวาล่างเสมอกันเพื่อสร้างจุดยึดเหนี่ยวทางสายตา (Eye Tracking Pattern) ที่จดจำง่าย
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    % \includegraphics[width=0.9\textwidth]{รูป_figma_detail.png}
+    \includegraphics[width=0.9\linewidth, height=0.42\textheight, keepaspectratio]{DemoProductDeatail.png}
     \caption{แบบจำลองโครงร่างหน้ารายละเอียดข้อมูลเฉพาะของสินค้า}
 \end{figure}
 
 \subsection{หน้าจอตะกร้าสินค้าและการชำระเงิน (Cart \& Checkout Design)}
 \textbf{ทฤษฎีแนวคิดการออกแบบ (Design Rationale):} อาศัยการรวบขั้นตอนการกรอกชื่อและที่อยู่ เข้ากับการสแกนอัปโหลดสลิปชำระเงินให้จบกระบวนการภายในหน้าเดียว (Single-step Checkout) เพื่อขจัดภาระความทรงจำระยะสั้น (Cognitive Load Reduction) ของผู้ใหญ่ที่มักลืมว่าตนเองกดดำเนินการถึงขั้นตอนไหนแล้ว พร้อมขยายขนาดตัวเลขยอดชำระรวมให้ใหญ่เพื่อความโปร่งใส
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    % \includegraphics[width=0.9\textwidth]{รูป_figma_checkout.png}
+    \includegraphics[width=0.9\linewidth, height=0.42\textheight, keepaspectratio]{DemoPayment.png}
     \caption{แบบจำลองโครงร่างตะกร้าสินค้าและการชำระเงินโอนสลิป}
 \end{figure}
 
 \subsection{หน้าจอแผงควบคุมสถิติหลังบ้าน (Admin Dashboard Layout)}
 \textbf{ทฤษฎีแนวคิดการออกแบบ (Design Rationale):} ถึงแม้จะเป็นระบบสำหรับคนทำงานหรือแอดมิน (Admin) เลย์เอาต์ยังคงยึดหลักความสะอาดตา (Clean UI) ใช้แผนภูมิเส้นและกราฟแท่ง (Data Visualization) ในการสรุปผลยอดขาย ช่วยให้ผู้ประกอบการวิเคราะห์สถิติภาพรวมรายวันได้รวดเร็วโดยไม่ต้องเพ่งสายตาอ่านตารางตัวเลขดงดิบ
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
-    % \includegraphics[width=0.9\textwidth]{รูป_figma_admin.png}
+    \includegraphics[width=0.9\linewidth, height=0.42\textheight, keepaspectratio]{Demoadmin.png}
     \caption{แบบจำลองโครงร่างแผงควบคุมสถิติวิเคราะห์ระบบหลังบ้าน}
 \end{figure}
+
 
 
 % =========================================================
